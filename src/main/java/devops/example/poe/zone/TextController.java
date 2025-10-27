@@ -15,29 +15,18 @@ public class TextController {
     // Multiple lines of text
     @GetMapping("/multiline")
     public String multilineText() {
-        return """
-               This is a multiline text response.
-               Line 1: Welcome to Spring Boot
-               Line 2: This is a simple controller
-               Line 3: Returning plain text data
-               """;
+        return "Line 2";
     }
 
     // Text with dynamic content
     @GetMapping("/greeting")
     public String greeting() {
-        return "Current time: " + java.time.LocalDateTime.now() + 
-               "\\nWelcome to our Spring Boot application!";
+        return "Current time: " + java.time.LocalDateTime.now();
     }
 
     // JSON-like text (but still as plain string)
     @GetMapping("/info")
     public String applicationInfo() {
-        return """
-               Application: Spring Boot Demo
-               Version: 1.0.0
-               Status: Running
-               Description: Simple text controller example
-               """;
+        return "poe app";
     }
 }
